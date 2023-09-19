@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismos Mercedes-Benz</title>
+    <link rel="icon" href="img/mercedes_icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f2d91846f2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+    <nav id="nav-up">
+        <!-- Iconos para pantalla max-width:768p -->
+        <div class="icons-small-screen">
+            <label class="burger" for="nav-down-small-screen"><i class="fa-solid fa-bars"></i></label>
+            <label class="car-label-modelos" for="show-modelos"><i class="fa-solid fa-car-rear"></i></label>
+        </div>
+        <!--  -->
+        <div class="nav-logo">
+            <a href="inicio.html">
+                <img class="img-logo" src="img/mercedes_icon.png">
+                <p class="grey-font">Mercedes-Benz</p>
+            </a>
+        </div>
+        <div class="nav-search">
+            <p class="grey-font derechos">© 2023. Mercedes-Benz AG. Reservados todos los derechos (créditos)</p>
+            <div class="search">
+                <input type="search" id="search" name="search"
+                    placeholder="Tu búsqueda / Código online del configurador">
+                <i class="fa-solid fa-magnifying-glass fa-rotate-90 grey-font"></i>
+            </div>
+            <div class="right-icons">
+                <i class="fa-solid fa-magnifying-glass fa-rotate-90 grey-font"></i>
+                <i class="fa-solid fa-star grey-font"></i>
+                <i class="fa-regular fa-user grey-font"></i>
+            </div>
+        </div>
+    </nav>
+    <nav id="nav-down">
+        <input type="radio" id="nav-down-small-screen" name="options">
+        <ul class="nav-down-box">
+            <div class="x-box">
+                <label for="hide-modelos" style="font-size: 22px;">x</label>
+            </div>
+            <li>
+                <label for="show-modelos"><i class="fa-solid fa-car-rear"></i>Nuestros modelos 
+                    <div class="cont-more-than">
+                        <div class="more-than"></div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="show-comprar">Buscar y comprar
+                    <div class="cont-more-than">
+                        <div class="more-than"></div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="show-asesoramiento">Asesoramiento para la compra
+                    <div class="cont-more-than">
+                        <div class="more-than"></div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="show-servicios">Servicios y accesorios
+                    <div class="cont-more-than">
+                        <div class="more-than"></div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="show-tecnologia">Tecnologia
+                    <div class="cont-more-than">
+                        <div class="more-than"></div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <p class="derechos">© 2023. Mercedes-Benz AG. Reservados todos los derechos (créditos)</p>
+            </li>
+        </ul>
+        <ul class="nav-ul">
+            <li class="nav-modelos">
+                <input id="show-modelos" type="radio" name="options">
+                <label for="hide-modelos" class="background-click"></label>
+                <hr class="hr-modelos">
+                <input id="hide-modelos" type="radio" name="options">
+                <div class="content-modal">
+                    <div class="x-box">
+                        <label for="hide-modelos" style="font-size: 22px;">x</label>
+                    </div>
+                    <ul class="content-list">
+                        <label class="label-return" for="nav-down-small-screen">
+                                <div class="cont-less-than">
+                                    <div class="less-than"></div>
+                                </div> 
+                                <p>Nuestros modelos</p>
+                        </label>
+                        <h3>Nuestros modelos</h3>
+                        <li class="list-modelos">
+                            <p class="modelos-content"><a>Todos los modelos</a></p>
+                        </li>
+                        <li class="list-modelos">
+                            <p class="modelos-content"><a><i class="fa-solid fa-charging-station"></i>Eléctrico</a>
+                            </p>
+                            <p class="modelos-content">
+                                <a>
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                                Híbrido enchufable</a>
+                            </p>
+                        </li>
+                        <li class="list-modelos">
+                            <ul class="lista-modelos">
+                                <li class="modelos-content"><label>Berlina <div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div></label></li>
+                                <li class="modelos-content">
+                                    <label>SUV
+                                        <div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="modelos-content"><label>Estate<div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div></label></li>
+                                <li class="modelos-content"><label>Compacto<div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div></label></li>
+                                <li class="modelos-content"><label>Coupé<div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div></label></li>
+                                <li class="modelos-content"><label>Cabrio<div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div></label></li>
+                                <li class="modelos-content"><label>Monovolumen<div class="cont-more-than">
+                                            <div class="more-than"></div>
+                                        </div></label></li>
+                            </ul>
+                        </li>
+                        <li class="list-modelos">
+                            <p class="modelos-content"><a><img id="amg-logo" src="img/AMG_logo.svg.png"></a></p>
+                            <p class="modelos-content"><a id="maybach"><b>MAYBACH</b></a></p>
+                            <p class="modelos-content">
+                                <a>
+                                    <b><i>Nuevos modelos <i class="fa-solid fa-star fa-2xs"
+                                                style="color: #34a6df;"></i></i></b>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="list-modelos">
+                            <p class="list1-content-bottom"><a><i class="fa-solid fa-gear"></i>Configura tu
+                                    vehículo</a></p>
+                            <p class="list1-content-bottom"><a><i class="fa-regular fa-life-ring"></i>Prueba de
+                                    conducción</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-comprar">
+                <input id="show-comprar" type="radio" name="options">
+                <input id="hide-comprar" type="radio" name="options">
+                <label for="hide-comprar" class="background-click"></label>
+                <hr class="hr-comprar">
+                <div class="content-modal">
+                    <div class="x-box">
+                        <label for="hide-comprar" style="font-size: 22px;">x</label>
+                    </div>
+                    <ul class="content-list">
+                        <label class="label-return" for="nav-down-small-screen">
+                            <div class="cont-less-than">
+                                <div class="less-than"></div>
+                            </div>
+                            <p>Buscar y comprar</p>
+                        </label>
+                        <h3>Buscar y comprar</h3>
+                        <li class="list-comprar more-than-box">
+                            <p>Ofertas destacadas</p>
+                            <div class="more-than"></div>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Plan Ayuda Sostenible</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Nuestros modelos</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Vehículos Premium de Ocasión</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Buscador de Vehículos de Ocasión</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Mercedes-Benz Empresas</p>
+                        </li>
+                        <li class="list1-bottom">
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-gear"></i></div>Configura tu
+                                vehículo
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-regular fa-life-ring"></i></div>Prueba de
+                                conducción
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-calculator"></i></div>Calcula tu
+                                cuota
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-asesoramiento">
+                <input id="show-asesoramiento" type="radio" name="options">
+                <input id="hide-asesoramiento" type="radio" name="options">
+                <label for="hide-asesoramiento" class="background-click"></label>
+                <hr class="hr-asesoramiento">
+                <div class="content-modal">
+                    <div class="x-box">
+                        <label for="hide-asesoramiento" style="font-size: 22px;">x</label>
+                    </div>
+                    <ul class="content-list">
+                        <label class="label-return" for="nav-down-small-screen">
+                            <div class="cont-less-than">
+                                <div class="less-than"></div>
+                            </div>
+                            <p>Asesoramiento para la compra</p>
+                    </label>
+                        <h3>Asesoramiento para la compra</h3>
+                        <li class="list-comprar">
+                            <p>Nuestro servicios financieros</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Ofertas de financiación</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Productos financieros</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Seguros</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Mantenimiento</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Movilidad eléctrica</p>
+                        </li>
+                        <li class="list1-bottom">
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-gear"></i></div>Configura tu
+                                vehículo
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-regular fa-life-ring"></i></div>Prueba de
+                                conducción
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-calculator"></i></div>Calcula tu
+                                cuota
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-car-rear"></i></div>Resumen de
+                                modelos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-servicios">
+                <input id="show-servicios" type="radio" name="options">
+                <input id="hide-servicios" type="radio" name="options">
+                <label for="hide-servicios" class="background-click"></label>
+                <hr class="hr-servicios">
+                <div class="content-modal">
+                    <div class="x-box">
+                        <label for="hide-servicios" style="font-size: 22px;">x</label>
+                    </div>
+                    <ul class="content-list">
+                        <label class="label-return" for="nav-down-small-screen">
+                            <div class="cont-less-than">
+                                <div class="less-than"></div>
+                            </div>
+                            <p>Servicios y accesorios</p>
+                    </label>
+                        <h3>Servicios y accesorios</h3>
+                        <li class="list-comprar">
+                            <p>Pide cita en el taller</p>
+                        </li>
+                        <li class="list-comprar more-than-box">
+                            <p>Mercedes me</p>
+                            <div class="more-than"></div>
+                        </li>
+                        <li class="list-comprar more-than-box">
+                            <p>Servicios Posventa y mantenimiento</p>
+                            <div class="more-than"></div>
+                        </li>
+                        <li class="list-comprar more-than-box">
+                            <p>Asistencia en carretera</p>
+                            <div class="more-than"></div>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Accesorios originales</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Boutique</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Cuidado del vehículo</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Llamadas a taller de vehículos</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Homologaciones y Reformas</p>
+                        </li>
+                        <li class="list1-bottom">
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-gear"></i></div>Configura tu
+                                vehículo
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-regular fa-life-ring"></i></div>Prueba de
+                                conducción
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-calculator"></i></div>Calcula tu
+                                cuota
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-tecnologia">
+                <input id="show-tecnologia" type="radio" name="options">
+                <input id="hide-tecnologia" type="radio" name="options">
+                <label for="hide-tecnologia" class="background-click"></label>
+                <hr class="hr-tecnologia">
+                <div class="content-modal">
+                    <div class="x-box">
+                        <label for="hide-tecnologia" style="font-size: 22px;">x</label>
+                    </div>
+                    <ul class="content-list">
+                        <label class="label-return" for="nav-down-small-screen">
+                            <div class="cont-less-than">
+                                <div class="less-than"></div>
+                            </div>
+                            <p>Tecnología</p>
+                        </label>
+                        <h3>Tecnología</h3>
+                        <li class="list-comprar">
+                            <p>Movilidad eléctrica</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Tecnología e Innovación</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Carga y Wallbox</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Sostenibilidad</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Descubre Mercedes me</p>
+                        </li>
+                        <li class="list-comprar">
+                            <p>Sistema multimedia MBUX</p>
+                        </li>
+                        <li class="list-comprar more-than-box">
+                            <p>Sistemas de seguridad y conducción autónoma</p>
+                            <div class="more-than"></div>
+                        </li>
+                        <li class="list1-bottom">
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-car-rear"></i></div>Resumen de
+                                modelos
+                            </a>
+                            <a class="list1-content-bottom">
+                                <div class="div-i"><i class="fa-solid fa-gear"></i></div>Configurador
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio">
+            <img src="img/img_inicio.avif">
+            <div class="inicio-box">
+                <h1 class="inicio-titulo">Nuevo EQE SUV<br>
+                    100% eléctrico.</h1>
+                <p class="grey-font"><b>Para nuevos desafíos.</b></p>
+                <div class="inicio-enlaces">
+                    <div>
+                        <a>Más información</a>
+                    </div>
+
+                    <div class="blue-button">
+                        <a>Oferta Personalizada</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="recomendaciones">
+            <h1>Nuestras recomendaciones.</h1>
+            <div class="carrusel">
+                <!-- Botones de 2 en 2 -->
+                <input id="button1" type="radio" name="carrusel" checked>
+                <input id="button2" type="radio" name="carrusel">
+                <input id="button1-1" type="radio" name="carrusel">
+                <input id="button2-1" type="radio" name="carrusel">
+                <label class="prev-one" for="button1"><i class="fa-solid fa-greater-than fa-rotate-180"></i></label>
+                <label class="prev-one prev-pair" for="button1-1"><i class="fa-solid fa-greater-than fa-rotate-180"></i></label>
+                <label class="next-one" for="button2"><i class="fa-solid fa-greater-than"></i></label>
+                <label class="next-one next-pair" for="button2-1"><i class="fa-solid fa-greater-than"></i></label>
+                <!-- Botones de 1 en 1 -->
+                <input id="button-default" type="radio" name="carrusel">
+                <input id="button-one" type="radio" name="carrusel">
+                <input id="button-two" type="radio" name="carrusel">
+                <input id="button-three" type="radio" name="carrusel">
+                <input id="button-four" type="radio" name="carrusel">
+                <label for="button-default">
+                    <div class="default-bottom">
+                        <div></div>
+                    </div>
+                </label>
+                <label for="button-one">
+                    <div class="one-bottom">
+                        <div></div>
+                    </div>
+                </label>
+                <label for="button-two">
+                    <div class="two-bottom">
+                        <div></div>
+                    </div>
+                </label>
+                <label class="label-button-3" for="button-three">
+                    <div class="three-bottom">
+                        <div></div>
+                    </div>
+                </label>
+                <label class="label-button-4" for="button-four">
+                    <div class="four-bottom">
+                        <div></div>
+                    </div>
+                </label>
+                <!-- Carrusel -->
+                <ul>
+                    <li class="carrusel-li">
+                        <div><img src="img/img_recomendaciones/img1.avif"></img></div>
+                        <div class="carrusel-li-text">
+                            <h4>Plan Ayuda Sostenible.</h4>
+                            <p>Descuentos exclusivos para modelos 100% eléctricos.</p>
+                            <div class="carrusel-button">
+                                <div class="blue-button">
+                                    <a>Descúbrelos</a>
+                                </div>
+                                <div class="transp-button">
+                                    <a>Ver ofertas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carrusel-li">
+                        <div><img src="img/img_recomendaciones/img2.avif"></img></div>
+                        <div class="carrusel-li-text">
+                            <h4>Gama Híbridos Enchufables.</h4>
+                            <p>Con cargador de regalo hasta el 30/09.</p>
+                            <div class="carrusel-button">
+                                <div class="blue-button">
+                                    <a>Descubre nuestras ofertas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carrusel-li">
+                        <div><img src="img/img_recomendaciones/imgNuevoCoupe.avif"></img></div>
+                        <div class="carrusel-li-text">
+                            <h4>Nuevas CLE Coupé y CLE Cabrio.</h4>
+                            <p>Disponibles próximamente.</p>
+                            <div class="carrusel-button">
+                                <div class="blue-button">
+                                    <a>CLE Coupé</a>
+                                </div>
+                                <div class="blue-button">
+                                    <a>CLE Cabrio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carrusel-li">
+                        <div><img src="img/img_recomendaciones/img3.avif"></img></div>
+                        <div class="carrusel-li-text">
+                            <h4>Nuevo Clase E Estate.</h4>
+                            <p>Disponible próximamente.</p>
+                            <div class="carrusel-button">
+                                <div class="blue-button">
+                                    <a>Descúbrelo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carrusel-li">
+                        <div><img src="img/img_recomendaciones/img4.avif"></img></div>
+                        <div class="carrusel-li-text">
+                            <h4>Nuevo Clase E Berlina.</h4>
+                            <p>Disponible próximamente.</p>
+                            <div class="carrusel-button">
+                                <div class="blue-button">
+                                    <a>Descúbrelo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carrusel-li">
+                        <div><img src="img/img_recomendaciones/img5.avif"></img></div>
+                        <div class="carrusel-li-text">
+                            <h4>Revista Mercedes-Benz me.</h4>
+                            <p>Descubre nuestro universo lleno de nuevas experiencias.</p>
+                            <div class="carrusel-button">
+                                <div class="blue-button">
+                                    <a>Descúbrelo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="modelos">
+            <h1>Nuestros modelos</h1>
+            <div class="nav-bars-modelos">
+                <div class="modelos-nav-top">
+                    <div class="todos-modelos">
+                        <p>Todos los modelos</p>
+                    </div>
+                    <div class="modelos-amg-logo"><img id="amg-logo" src="img/AMG_logo.svg.png"></div>
+                    <div class="modelos-maybach-logo"><a id="maybach"><b>MAYBACH</b></a></div>
+                    <div>
+                        <a>
+                            <b><i>Nuevos modelos <i class="fa-solid fa-star fa-2xs" style="color: #34a6df;"></i></i></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="modelos-nav-tiny">
+
+                </div>
+                <div class="modelos-nav-left">
+                    <div class="combustibles">
+                        <h2><b>Tipo de combustible</b></h2>
+                        <div>
+                            <input id="electrico" type="checkbox">
+                            <label for="electrico">Eléctrico</label>
+                        </div>
+                        <div>
+                            <input id="hibrido" type="checkbox">
+                            <label for="hibrido">Híbrido enchufable</label>
+                        </div>
+                    </div>
+                    <div class="carrocerias">
+                        <h2><b>Carrocerías</b></h2>
+                        <ul>
+                            <li class="grey-font-modelos">Berlina</li>
+                            <li class="grey-font-modelos">SUV</li>
+                            <li class="grey-font-modelos">Estate</li>
+                            <li class="grey-font-modelos">Compacto</li>
+                            <li class="grey-font-modelos">Coupé</li>
+                            <li class="grey-font-modelos">Cabrio</li>
+                        </ul>
+                        <div></div>
+                    </div>
+                    <div class="mostrar-todo">
+                        <h2><b>Mostrar todo</b></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="modelos-grid">
+                <div class="modelos-berlina">
+                    <p class="grey-font-modelos" style="font-size:large">Berlina</p>
+                    <div class="automovil-grid">
+                        <div class="automovil">
+                            <div class="automovil-texto">
+                                <div class="automovil-nombre">EQE Berlina</div>
+                                <div class="automovil-precio">Desde 77.630,76 € <sup>[a]</sup></div>
+                                <div class="automovil-tag-gris">Eléctrico</div>
+                            </div>
+                            <img src="img/img_modelos_berlina/EQE_Berlina.webp" />
+                            <div class="automovil-hover-box-background">
+                                <div class="automovil-hover-box">
+                                    <div class="mas-informacion">
+                                        <i class="fa-solid fa-sheet-plastic"></i>
+                                        <p>Más información</p>
+                                    </div>
+                                    <div class="configurador">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <p>Configurador</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="automovil">
+                            <div class="automovil-texto">
+                                <div class="automovil-nombre">EQS Berlina</div>
+                                <div class="automovil-precio">Desde 124.429,27 € <sup>[a]</sup></div>
+                                <div class="automovil-tag-gris">Eléctrico</div>
+                            </div>
+                            <img src="img/img_modelos_berlina/EQS_Berlina.webp" />
+                            <div class="automovil-hover-box-background">
+                                <div class="automovil-hover-box">
+                                    <div class="mas-informacion">
+                                        <i class="fa-solid fa-sheet-plastic"></i>
+                                        <p>Más información</p>
+                                    </div>
+                                    <div class="configurador">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <p>Configurador</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="automovil">
+                            <div class="automovil-texto">
+                                <div class="automovil-nombre">Clase A Berlina</div>
+                                <div class="automovil-precio">Desde 39.131,59 € <sup>[a]</sup></div>
+                                <div class="automovil-tag-gris">Híbrido</div>
+                            </div>
+                            <img src="img/img_modelos_berlina/ClaseA_Berlina.webp" />
+                            <div class="automovil-hover-box-background">
+                                <div class="automovil-hover-box">
+                                    <div class="mas-informacion">
+                                        <i class="fa-solid fa-sheet-plastic"></i>
+                                        <p>Más información</p>
+                                    </div>
+                                    <div class="configurador">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <p>Configurador</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="automovil">
+                            <div class="automovil-texto">
+                                <div class="automovil-nombre">Clase C Berlina</div>
+                                <div class="automovil-precio">Desde 51.029,36 € <sup>[a]</sup></div>
+                                <div class="automovil-tag-gris">Híbrido</div>
+                            </div>
+                            <img src="img/img_modelos_berlina/ClaseC_Berlina.webp" />
+                            <div class="automovil-hover-box-background">
+                                <div class="automovil-hover-box">
+                                    <div class="mas-informacion">
+                                        <i class="fa-solid fa-sheet-plastic"></i>
+                                        <p>Más información</p>
+                                    </div>
+                                    <div class="configurador">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <p>Configurador</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="automovil">
+                            <div class="automovil-texto">
+                                <div class="automovil-nombre">Clase E Berlina</div>
+                                <div class="automovil-precio">Desde 57.004,32 € <sup>[a]</sup></div>
+                                <div class="automovil-tag-gris">Híbrido</div>
+                            </div>
+                            <img src="img/img_modelos_berlina/ClaseE_Berlina.webp" />
+                            <div class="automovil-hover-box-background">
+                                <div class="automovil-hover-box">
+                                    <div class="mas-informacion">
+                                        <i class="fa-solid fa-sheet-plastic"></i>
+                                        <p>Más información</p>
+                                    </div>
+                                    <div class="configurador">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <p>Configurador</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="automovil">
+                            <div class="automovil-texto">
+                                <div class="automovil-nombre">Clase E Berlina</div>
+                                <div class="automovil-precio">Disponible próximamente <sup></sup></div>
+                                <div class="automovil-tag-azul">Nuevo</div>
+                            </div>
+                            <img src="img/img_modelos_berlina/ClaseE_BerlinaGris.webp" />
+                            <div class="automovil-hover-box-background">
+                                <div class="automovil-hover-box">
+                                    <div class="mas-informacion">
+                                        <i class="fa-solid fa-sheet-plastic"></i>
+                                        <p>Más información</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <input type="checkbox" id="notas">
+        <section id="aviso-notas">
+            <div class="aviso-box-titulo">
+                <p class="aviso-texto-titulo">Aviso legal y notas</p>
+            </div>
+            <div class="up-down-box">
+                <label for="notas"><i class="fa-solid fa-less-than fa-rotate-90"></i></label>
+                <label for="notas"><i class="fa-solid fa-less-than fa-rotate-270"></i></label>
+            </div>
+            <p class="grey-font">[a] Precio recomendado con IVA (21%), Impuesto de Matriculación y transporte incluidos
+                (impuestos válidos para Península y Baleares). Otros conceptos como Impuestos Municipales, preentrega o
+                gastos de matriculación no están incluidos en este precio. Impuesto de matriculación según tramos
+                impositivos del 0% - 4,75% - 9,75% - 14,75% en función de las emisiones de CO₂. Estos tramos impositivos
+                pueden variar según la Comunidad Autónoma.
+                Los datos no se refieren a un vehículo en particular y no forman parte de una oferta, sino que
+                únicamente sirven para establecer comparativas entre distintos modelos. Para más información acerca del
+                consumo de combustible oficial y de las emisiones de CO₂ se puede consultar la 'Guía de consumo de
+                combustible y emisiones de CO₂ de nuevos vehículos' que está disponible sin coste en todos los puntos de
+                venta y en IDAE en www.idae.es.<br><br>
+                A pesar de que el contenido de esta página se revisa cuidadosamente, pueden existir incorrecciones o
+                errores involuntarios en los precios y/o equipamientos mostrados, por lo que se debe informar sobre el
+                particular en un Concesionario Mercedes-Benz. Asimismo, por causas que así lo justifiquen, como pudieran
+                ser la seguridad del vehículo y la de sus ocupantes o el stock de producción, el fabricante se reserva
+                el derecho de efectuar modificaciones en el diseño,
+                la forma, el color o el equipamiento en relación con los datos contenidos en esta web, por lo que
+                podrían haberse producido cambios en el producto tras su configuración y diseño. Dichas modificaciones
+                no supondrán en ningún caso, variación de las condiciones jurídicas y garantías ofrecidas por
+                Mercedes-Benz en perjuicio del consumidor. Las ilustraciones y los textos incluyen también accesorios y
+                equipos opcionales no pertenecientes al equipamiento de serie.
+                Posibles diferencias entre la pintura original y el color reproducido se deben a la técnica de
+                proyección e impresión. Esta publicación puede contener modelos, equipamientos y servicios no
+                disponibles en determinados países. Por las anteriores razones, reiteramos nuestra sugerencia de
+                consultar al Concesionario Mercedes-Benz para obtener información actual sobre todas las características
+                del producto y, si lo desea, una oferta. La información contenida en esta
+                web referente a prescripciones legales y fiscales y a sus efectos es válida únicamente en España para
+                vehículos con placa nacional. Se recomienda de nuevo que para obtener datos más actualizados se dirija
+                al Concesionario Mercedes-Benz.<br>
+                Aviso legal sobre los sistemas de seguridad y asistencia a la conducción en general: Nuestros sistemas
+                de seguridad y asistencia a la conducción son herramientas auxiliares, por lo que no eximen al usuario
+                de su responsabilidad como conductor. Hay que tener en cuenta las indicaciones que figuran en las
+                instrucciones de servicio del vehículo y las limitaciones del sistema que allí se describen.
+                La disponibilidad del módulo de comunicación (LTE) en algunos vehículos está temporalmente limitada
+                debido a la falta de suministro a nivel mundial de semiconductores. Por favor, tenga en cuenta que en
+                especial los Servicios Remotos Mercedes me Connect, incluyendo la llamada de emergencia (eCall) no están
+                disponibles en los vehículos afectados hasta un posterior retrofit. Podrá encontrar información
+                actualizada en la red de concesionarios Mercedes-Benz.</p>
+            <div class="box-notas">
+                <div class="four-box">
+                    <i class="fa-solid fa-car-rear fa-xl first-icon" style="color: #565658;"></i>
+                    <i class="fa-solid fa-arrow-right fa-lg" style="color: #47a6ff;"></i>
+                    <div>
+                        <h2>Mostrar todos los vehículos.</h2>
+                        <p>Descubre tu nuevo Mercedes.</p>
+                    </div>
+                </div>
+                <div class="four-box">
+                    <i class="fa-solid fa-gear fa-xl first-icon" style="color: #565658;"></i>
+                    <i class="fa-solid fa-arrow-right fa-lg" style="color: #47a6ff;"></i>
+                    <div>
+                        <h2>Configurador.</h2>
+                        <p>Configura tu vehículo</p>
+                    </div>
+                </div>
+                <div class="four-box">
+                    <i class="fa-solid fa-location-dot fa-xl first-icon" style="color: #565658;"></i>
+                    <i class="fa-solid fa-arrow-right fa-lg" style="color: #47a6ff;"></i>
+                    <div>
+                        <h2>Localizador de concesionarios.</h2>
+                        <p>Encuentra un taller Mercedes-Benz.</p>
+                    </div>
+                </div>
+                <div class="four-box">
+                    <i class="fa-solid fa-calculator fa-xl first-icon" style="color: #565658;"></i>
+                    <i class="fa-solid fa-arrow-right fa-lg" style="color: #47a6ff;"></i>
+                    <div>
+                        <h2>Calculadora financiera.</h2>
+                        <p>Elige la cuota de tu Mercedes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion-negra">
+            <div class="todos-los-vehiculos">
+                <div class="header-vehiculos">
+                    <h4>Todos los vehículos</h4>
+                </div>
+                <div class="carrusel-vehiculos">
+                    <ul>
+                        <li class="caja-vehiculo">
+                            <div>
+                                <i class="fa-solid fa-van-shuttle fa-flip-horizontal fa-2xl"></i>
+                                <p>Furgonetas</p>
+                            </div>
+                        </li>
+                        <li class="caja-vehiculo">
+                            <div>
+                                <i class="fa-solid fa-caravan fa-flip-horizontal fa-2xl"></i>
+                                <p>Autocaravanas</p>
+                            </div>
+                        </li>
+                        <li class="caja-vehiculo">
+                            <div>
+                                <i class="fa-solid fa-truck fa-flip-horizontal fa-2xl"></i>
+                                <p>Camiones</p>
+                            </div>
+                        </li>
+                        <li class="caja-vehiculo">
+                            <div>
+                                <i class="fa-solid fa-bus fa-2xl"></i>
+                                <p>Autobuses y autocares</p>
+                            </div>
+                        </li>
+                        <li class="caja-vehiculo">
+                            <div>
+                                <i class="fa-solid fa-truck-field fa-flip-horizontal fa-2xl"></i>
+                                <p>Unimog</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="up-button">
+                    <a href="#nav-up">
+                        <i class="fa-solid fa-less-than fa-rotate-90 fa-2xl"></i>
+                        <p>Volver arriba</p>
+                    </a>
+                </div>
+            </diV>
+            <div class="columnas-finales">
+                <ul class="lista-columnas">
+                    <li class="lista-columnas-li">
+                        <h5>Encuentra tu Mercedes</h5>
+                        <ul class="lista-columnas-interior grey-font">
+                            <li><a class="animacion-underline">Resumen de modelos</a></li>
+                            <li><a class="animacion-underline">Encontrar un vehículo de Ocasión</a></li>
+                            <li><a class="animacion-underline">Configurador</a></li>
+                        </ul>
+                    </li>
+                    <li class="lista-columnas-li">
+                        <h5>Asesoramiento para la compra</h5>
+                        <ul class="lista-columnas-interior grey-font">
+                            <li><a class="animacion-underline">Prueba de conducción</a></li>
+                            <li><a class="animacion-underline">Encontrar un concesionario</a></li>
+                            <li><a class="animacion-underline">Calculadora financiera</a></li>
+                            <li><a class="animacion-underline">Flotas y empresas</a></li>
+                            <li><a class="animacion-underline">B2B Connect</a></li>
+                        </ul>
+                    </li>
+                    <li class="lista-columnas-li">
+                        <h5>Servicios para el cliente</h5>
+                        <ul class="lista-columnas-interior grey-font">
+                            <li><a class="animacion-underline">Pedir hora en el taller</a></li>
+                            <li><a class="animacion-underline">Asistencia en caso de avería o accidente</a></li>
+                            <li><a class="animacion-underline">Ofertas actuales de servicio postventa</a></li>
+                            <li><a class="animacion-underline">Accesorios Originales</a></li>
+                            <li><a class="animacion-underline">Información sobre llamadas a taller</a></li>
+                            <li><a class="animacion-underline">Manuales de instrucciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="lista-columnas-li">
+                        <h5>Tecnología</h5>
+                        <ul class="lista-columnas-interior grey-font">
+                            <li><a class="animacion-underline">Movilidad eléctrica</a></li>
+                            <li><a class="animacion-underline">Carga y Servicios digitales</a></li>
+                            <li><a class="animacion-underline">Mercedes me Connect store</a></li>
+                            <li><a class="animacion-underline">Acerca de Mercedes me</a></li>
+                            <li><a class="animacion-underline">Servicios Connect</a></li>
+                            <li><a class="animacion-underline">Preguntas frecuentes sobre Mercedes me</a></li>
+                        </ul>
+                    </li>
+                    <li class="lista-columnas-li">
+                        <h5>Mundo Mercedes</h5>
+                        <ul class="lista-columnas-interior grey-font">
+                            <li><a class="animacion-underline">Sostenibilidad y futuro</a></li>
+                            <li><a class="animacion-underline">Mercedes-Benz Fashion Week</a></li>
+                            <li><a class="animacion-underline">Boutique Mercedes</a></li>
+                            <li><a class="animacion-underline">Mercedes y el deporte</a></li>
+                            <li><a class="animacion-underline">Mercedes-Benz We Life</a></li>
+                            <li><a class="animacion-underline">She's Mercedes</a></li>
+                        </ul>
+                    </li>
+                    <li class="lista-columnas-li">
+                        <h5>Acerca de nosotros</h5>
+                        <ul class="lista-columnas-interior grey-font">
+                            <li><a class="animacion-underline">Contacto</a></li>
+                            <li><a class="animacion-underline">Nuestra historia</a></li>
+                            <li><a class="animacion-underline">Trabaja en Mercedes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <div class="footer-f1">
+                    <div class="footer-f1-texto">
+                        <a class="animacion-underline grey-font">2023 Mercedes-Benz AG. Reservados todos los derechos
+                            (proveedor)</a>
+                        <a class="animacion-underline grey-font">Aviso legal</a>
+                        <a class="animacion-underline grey-font">Configuración cookies</a>
+                        <a class="animacion-underline grey-font">Protección de datos</a>
+                    </div>
+                    <div class="footer-f1-media">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                        <i class="fa-brands fa-twitter fa-xl"></i>
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </div>
+                </div>
+                <div class="footer-f2">
+                    <a class="animacion-underline grey-font">Información de Gestión</a>
+                </div>
+            </footer>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,1764 @@
+:root {
+    --gris-fuente-bordes: #c7c5c5;
+    --grisclaro-hover: rgb(232, 232, 232);
+    --gris-hover: #262626;
+    --cont-caja-vehiculos: rgb(191, 189, 189);
+    --azul-boton: #0078d6;
+    --azul-hover: #00508d;
+}
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+
+section:not(#inicio) {
+    padding: 65px 110px;
+}
+
+h1, h2, h3{
+    font-family: 'Noto Serif JP', serif;
+}
+
+h1{
+    font-size: 2.2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.grey-font{
+    color:var(--gris-fuente-bordes);
+}
+
+
+/* BARRAS DE NAVEGACIÓN ---------------------------------------------------------------- */
+/*:::BARRA SUPERIOR::: -------------------------------*/
+.icons-small-screen {
+    display: none;
+}
+.nav-down-box .cont-more-than {
+    display: none;
+}
+.nav-down-box .x-box {
+    display: none;
+}
+
+#nav-up {
+    display: flex;
+    height: 95px;
+    width: 100vw;
+    border-bottom: rgb(46, 46, 46) 1px solid;
+    background-color: black;
+}
+
+.nav-logo {
+    width: 38%;
+    margin: auto;
+    padding-left: 80px;
+}
+
+.nav-logo a {
+    display: flex;
+    align-items: flex-end;
+}
+
+.img-logo {
+    width: 65px;
+    margin-bottom: 5px;
+}
+
+.nav-logo a p {
+    margin: 0;
+    padding-left: 70px;
+    font-size: 1.1rem;
+    font-family:'Times New Roman', Times, serif;
+}
+/*::: superior derecha: ::*/
+.nav-search {
+    display: flex;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.derechos {
+    font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+    padding-right: 23px;
+}
+
+/*:::Buscador:::*/
+.search input:focus {
+    border-bottom:#0078d6 solid 2px;
+}
+
+.search {
+    background-color: var(--gris-hover);
+    width: 260px;
+    border-radius: 3%;
+    display: flex;
+    margin-right: 10px;
+}
+
+.search input {
+    width: 200px;
+    padding-left: 20px;
+    color: white;
+    background-color: var(--gris-hover);
+    height: 50px;
+    border: none;
+    outline: none;
+    text-overflow: ellipsis;
+}
+
+.search input::placeholder{
+    color:rgb(188, 188, 188);
+}
+
+/*:::FIN buscador:::*/
+
+.right-icons i {
+    padding: 16px;
+}
+
+.right-icons i:hover{
+    background-color: var(--gris-hover);
+}
+
+.right-icons .fa-magnifying-glass {
+    display: none;
+}
+
+/* ::: BARRA INFERIOR --------------------------:::*/
+.nav-down-box {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background-color: black;
+    color:var(--gris-fuente-bordes);
+    padding-left: 110px;
+}
+
+.nav-down-box label {
+    margin: 0 20px;
+    cursor: pointer;;
+}
+
+.nav-down-box p {
+    display: none;
+}
+
+.nav-down-box label:hover {
+    color:white;
+}
+
+#nav-down .nav-ul{
+    margin:0;
+    display:flex;
+    padding-left: 110px;
+}
+
+.nav-ul .derechos {
+    display: none;
+}
+
+.nav-modelos {
+    display:flex;
+}
+
+#nav-down i {
+    padding-right: 10px;
+}
+
+/* Fondo-boton transparente con opacidad para cerrar la ventana modal */
+.background-click {
+    visibility: hidden;
+    position: absolute;
+    top: 158px;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100vh;
+} 
+
+/*::Botón 'x' para cerrar la ventana modal::*/
+.x-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.x-box label {
+    margin-left: auto;
+    padding-right: 20px;
+    cursor: pointer;
+}
+/*::fin del boton 'x'::*/
+
+/*:::Botones navegador:::*/
+
+input[name=options]{
+    display:none;
+}
+
+/*::: Primer boton: Nuestros modelos :::*/
+
+#show-modelos:checked ~ .content-modal {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#show-modelos:checked ~ .background-click {
+    visibility: visible;
+}
+
+#show-modelos:checked ~ .hr-modelos {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*::: Segundo boton: Buscar y comprar :::*/
+
+#show-comprar:checked ~ .content-modal {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#show-comprar:checked ~ .background-click {
+    visibility: visible;
+}
+
+#show-comprar:checked ~ .hr-comprar {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*::: Tercer boton: Asesoramiento :::*/
+
+#show-asesoramiento:checked ~ .content-modal {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#show-asesoramiento:checked ~ .background-click {
+    visibility: visible;
+}
+
+#show-asesoramiento:checked ~ .hr-asesoramiento {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*::: Cuarto boton: Servicios :::*/
+
+#show-servicios:checked ~ .content-modal {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#show-servicios:checked ~ .background-click {
+    visibility: visible;
+}
+
+#show-servicios:checked ~ .hr-servicios {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*::: Quinto boton: Tencología :::*/
+
+#show-tecnologia:checked ~ .content-modal {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#show-tecnologia:checked ~ .background-click {
+    visibility: visible;
+}
+
+#show-tecnologia:checked ~ .hr-tecnologia {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*::hr azul::*/
+hr {
+    border-color: #0078d6;
+    position: absolute;
+    top: 95px;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease, opacity 1s ease;
+    transform: translateX(-110%);
+}
+
+.hr-modelos {
+    width: 210px;
+}
+
+.hr-comprar {
+    width: 160px;
+    left: 320px;
+}
+
+.hr-asesoramiento {
+    width: 270px;
+    left: 495px;
+}
+
+.hr-servicios {
+    width: 200px;
+    left: 770px;
+}
+
+.hr-tecnologia {
+    width: 115px;
+    left: 980px;
+}
+
+/*::: VENTANA MODAL (COMÚN):::*/
+
+.content-modal {
+    background-color: white;
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    width: 490px;
+    height: 550px;
+    border-radius: 0.5%;
+    overflow-y: scroll;
+    transform: translateX(-110%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.content-list {
+    display: block;
+    padding: 85px 83px 80px;
+}
+
+.label-return {
+    display: none;
+}
+
+.content-list h3 {
+    padding-bottom: 20px;
+}
+
+.list-modelos {
+    padding: 28px 0px;
+    border-bottom: rgb(50% 50% 50% / 50%) 1px solid;
+}
+
+.list-modelos:last-child{
+    border: none;
+}
+
+.list1-content-bottom{
+    color: grey;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.list1-content-bottom:hover{
+    color:black;
+}
+
+.list1-content-bottom i {
+    width: 30px;
+}
+
+.list1-bottom {
+    padding-top: 10px;
+}
+
+.div-i {
+    display: flex;
+    text-align: center;
+}
+
+.more-than-box {
+    display: flex; 
+    align-items: center;
+}
+
+.more-than-box p {
+    width: 250px;
+}
+
+.more-than{
+    width: 9px;
+    height: 9px;
+    margin-left: auto;
+    border-top: 2.2px solid black;
+    border-right: 2.2px solid black;
+    rotate: 45deg;
+}
+
+
+
+
+/*::: VENTANA NUESTROS MODELOS  :::*/
+
+.lista-modelos{
+    padding: 0;
+    display: block;
+}
+
+.modelos-content, .list1-content-bottom{
+    height: 40px;
+    align-items: center;
+    display: flex;
+    padding-left: 5px;
+    border-radius: 5%;
+}
+
+.modelos-content label {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.modelos-content label i{
+    margin-left:auto;
+    padding-right: 20px;
+}
+
+.modelos-content:hover{
+    background: rgb(220, 220, 220);
+    padding-left: 20px;
+    transition: 0.1s ease;  /* transición */
+}
+
+.cont-more-than {
+    margin-left: auto;
+    padding-right: 15px;
+}
+
+#amg-logo {
+    width: 100px;
+}
+
+#maybach {
+    font-size: 17px;
+}
+
+/*::: VENTANA BUSCAR Y COMPRAR :::*/
+
+.list-comprar {
+    border-bottom: none;
+    padding: 17px 0;
+}
+
+
+
+.list-comprar:first-of-type div {
+    margin-left: auto;
+}
+
+/*::: VENTANA ASESORAMIENTO :::*/
+
+
+
+
+/* MAIN */
+/* SECCION INICIAL ---------------------------------------------------------------- */
+
+#inicio {
+    z-index: -5;
+    color:rgb(222, 222, 222);
+    background: linear-gradient(90deg, black 2%, transparent 50%, transparent), linear-gradient(0deg, black 2%, transparent 50%, transparent);
+    width: 100%;
+    height: 682px;
+    display: flex;
+}
+
+#inicio img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.inicio-titulo {
+    font-size: 3.1rem;
+}
+
+.inicio-box{
+    margin: auto 0px auto 100px;
+}
+
+.inicio-box p {
+    padding: 45px 0;
+}
+
+/*Botones/enlaces*/
+.inicio-enlaces {
+    margin-top: 65px;
+    display: flex;
+}
+
+.inicio-enlaces div {
+    border-radius: 2%;
+    margin: 0 5px;
+}
+
+/*Boton 'Más información'*/
+.inicio-enlaces div:first-child {
+    font-weight: bold;
+    padding: 15px 20px;
+    border: var(--gris-fuente-bordes) 1px solid;
+    border-radius: 4%;
+    cursor: pointer;
+    color:white;
+}
+
+.inicio-enlaces div:first-child:hover {
+    background: rgb(43, 43, 43);
+}
+
+/*Botones color AZUL*/
+.blue-button {
+    display: flex;
+    font-weight: bold;
+    color: white;
+    background: var(--azul-boton);
+    border: var(--azul-boton) 1px solid;
+    border-radius: 4%;
+    padding: 10px 25px;
+    margin: 10px 0 8px;
+}
+
+.blue-button a {
+    margin: auto;
+}
+
+.blue-button:hover {
+    background-color: var(--azul-hover);
+    border: var(--azul-boton) 1px solid;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+/*::: SECCIÓN RECOMENDACIONES ----------------------------------------------:::*/
+
+#recomendaciones {
+    background: white;
+}
+
+.carrusel {
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.carrusel ul {
+    display: flex;
+    padding: 0;
+    transition: transform 0.5s ease; 
+}
+
+.carrusel-li {
+    margin: 0 22px;
+    line-height: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-li img {
+    width: 280px;
+}
+
+.carrusel-li-text {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+}
+
+.carrusel-li-text h4 {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+}
+
+/* Botones/enlaces del carrusel )*/
+.carrusel-button {
+    margin-top: auto;
+    margin-bottom: 13px;
+}
+
+/*Boton/enlace transparente*/ 
+.transp-button {
+    border: var(--gris-fuente-bordes) solid 1px;
+    padding: 10px 25px;
+    font-weight: bold;
+    display: flex;
+    border-radius: 4%;
+}
+
+.transp-button a {
+    margin: auto;
+}
+
+.transp-button:hover {
+    background: var(--grisclaro-hover);
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+input[name=carrusel] {
+    display: none;
+}
+
+/* Botones carrusel mayor y menor que '>' '<' */
+.next-one, .prev-one {
+    position: relative;
+    border: 1px rgb(0,0,0, 0.1) solid;
+    padding: 14px 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+.next-one {
+    left: 77vw;
+    top: 240px;
+}
+
+.prev-one{
+    top: 240px;
+    left: 2px;
+}
+
+.prev-one:hover, .next-one:hover{
+    background: var(--grisclaro-hover);
+    border: grey solid 1px;
+}
+
+.next-pair, .prev-pair {
+    display: none;
+}
+
+/* Botones debajo del carrusel */
+
+.default-bottom, .one-bottom, .two-bottom, 
+.three-bottom, .four-bottom {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.default-bottom div, .one-bottom div, 
+.two-bottom div, .three-bottom div, .four-bottom div{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+/* Posición de las bolas */
+.default-bottom {
+    top: 530px;
+    left: 610px;
+}
+.one-bottom {
+    top: 530px;
+    left: 635px;
+}
+.two-bottom {
+    top: 530px;
+    left: 660px;
+}
+
+.label-button-3, .label-button-4 {
+    display: none;
+}
+
+/* TRANSICIÓN DEL CARRUSEL (MOVIMIENTO) */
+/* FLECHAS */
+#button1:checked ~ ul {
+    transform: translateX(0%);
+}
+
+#button2:checked ~ ul {
+    transform: translateX(-50%);
+}
+/* BOLITAS */
+#button-default:checked ~ ul {
+    transform: translateX(0%);
+}
+
+#button-one:checked ~ ul {
+    transform: translateX(-25%);
+}
+
+#button-two:checked ~ ul {
+    transform: translateX(-50%);
+}
+
+/* COLOR BOLITAS */
+/* Posición DEFAULT */
+#button1:checked ~ label .default-bottom div {
+    background-color: black;
+}
+#button-default:checked ~ label .default-bottom div {
+    background-color: black;
+}
+/* Posición a 25% */
+#button-one:checked ~ label .one-bottom div {
+    background-color: black;
+}
+/* Posición a 50% */
+#button2:checked ~ label .two-bottom div {
+    background-color: black;
+}
+#button-two:checked ~ label .two-bottom div {
+    background-color: black;
+}
+
+
+/*::: SECCIÓN MODELOS-------------------------------------------------------------- :::*/
+
+#modelos {
+    max-height: 1000px;
+}
+
+.grey-font-modelos {
+    color: grey;
+    font-weight: 400;
+}
+
+/* Navegador superior */
+.modelos-nav-tiny {
+    display: none;
+}
+
+.modelos-nav-top {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.modelos-nav-top div {
+    border: 0.1px solid var(--gris-fuente-bordes);
+    padding: 20px;
+    margin-top: 60px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.modelos-nav-top div:hover {
+    background-color: var(--grisclaro-hover);
+}
+
+/* Navegador izquierdo */
+.modelos-nav-left {
+    border-right: 1px solid var(--gris-fuente-bordes);
+    width: 20vw;
+    padding-bottom: 30px;
+}
+
+.modelos-nav-left p{
+    font-size: 0.8rem;
+}
+
+.modelos-nav-left h2 {
+    font-size: 1rem; 
+}
+
+/* Combustibles */
+.combustibles div{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.combustibles input {
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+.combustibles input:hover {
+    background-color: grey;
+}
+
+.combustibles label {
+    width: 100%;
+}
+
+/* Carrocerías */
+
+.carrocerias h2 {
+    margin: 40px 0 10px;
+}
+
+.carrocerias div{
+    border-bottom: 1px solid var(--gris-fuente-bordes);
+    width: 100px;
+    margin: 10px 0;
+}
+
+.carrocerias ul {
+    padding: 0;
+}
+
+.carrocerias li{
+    padding: 10px;
+}
+
+.carrocerias li:hover {
+    color: var(--azul-boton);
+}
+
+/* Mostrar todo */
+.mostrar-todo {
+    margin-top: 15px;
+}
+
+
+/*:: GRID MODELOS ::*/
+
+.modelos-grid {
+    position: relative;
+    top: -480px;
+    left: 350px;
+    width: 60vw;
+}
+
+.modelos-grid .grey-font-modelos {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gris-fuente-bordes);
+}
+
+.automovil-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+/* Caja del automovil */
+.automovil {
+    position: relative;
+    margin-top: 5px;
+    transition: 0.35s;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Box hover automovil */
+.automovil:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.automovil:hover .automovil-hover-box-background {
+    background-color: rgb(245, 245, 245);
+    opacity: 1;
+}
+
+.automovil:hover .automovil-hover-box {
+    transform: translateY(0%);
+}
+
+.automovil-hover-box-background {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 250px;
+    height: 130px;
+    width: 100%;
+    justify-content: center;
+    padding: 5px;
+    transition: 0.35s;
+    z-index: 98;
+}
+
+.automovil-hover-box {
+    transition: 0.35s;
+    transform: translateY(-13%);
+    position: absolute;
+    margin-top: 20px;
+    background: white;
+    width: 95%;
+    color: rgb(62, 62, 62);
+    box-shadow: -0.1px -0.1px 2px grey, 0.1px 0.1px 2px grey;
+    z-index: 99;
+}
+
+.automovil-hover-box div {
+    display: flex;
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+.automovil-hover-box div:first-child {
+    border-bottom: 1px rgb(199, 199, 199) solid;
+}
+
+.automovil-hover-box p {
+    margin-left: 10px;
+}
+
+.mas-informacion:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.configurador:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+
+/* Fin box hover automovil */
+
+.automovil-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.automovil-texto {
+    margin-top: 20px;
+}
+
+.automovil-texto div {
+    margin: 5px;
+}
+
+.automovil-nombre {
+    font-size: large;
+}
+
+.automovil-precio {
+    font-size: 0.85rem;
+    color: grey;
+    padding-bottom: 5px;
+}
+
+.automovil-tag-gris, .automovil-tag-azul {
+    background: rgb(230, 230, 230);
+    width: 45%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.automovil-tag-gris {
+    background: rgb(230, 230, 230);
+}
+
+.automovil-tag-azul {
+    background: var(--azul-boton);
+    color:white;
+}
+
+.automovil img {
+    width: 100%;
+}
+/* fin caja */
+
+/*::: SECCION AVISO-NOTAS------------------------------------------------------------- :::*/
+#aviso-notas {
+    height: 1000px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+#aviso-notas .aviso-box-titulo{
+    border-bottom: var(--gris-fuente-bordes) solid 1px;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#aviso-notas .grey-font {
+    font-size: 0.8rem;
+    line-height: 25px;
+    color: #989898;
+    text-align: justify;
+}
+
+.aviso-texto-titulo {
+    font-size: 1.1rem;
+}
+
+.up-down-box {
+    position: relative;
+    bottom: 90px;
+}
+
+.up-down-box label {
+    padding-right: 40px;
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    height: 45px;
+}
+
+.fa-rotate-270 {
+    position:absolute;
+    top: 12px;
+    right: 27px;
+    visibility: hidden;
+}
+
+
+ /* BOTON NOTAS */
+
+#notas {
+    display: none;
+}
+
+#notas:checked ~ #aviso-notas {
+    height: 450px;
+}
+
+#notas:checked ~ #aviso-notas .box-notas {
+    transform: translateY(-155%);
+}
+
+#notas:checked ~ #aviso-notas div .fa-rotate-270 {
+    visibility:visible;
+}
+
+#notas:checked ~ #aviso-notas div .fa-rotate-90 {
+    display: none;
+}
+
+
+/*:: 4 CAJAS debajo de 'Aviso legal y notas ::*/
+.box-notas {
+    display: flex;
+    padding: 70px 0;
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.box-notas p {
+    font-size: 0.9rem;
+    color: grey;
+}
+
+#aviso-notas h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.four-box {
+    position: relative;
+    display: flex;
+    border: grey 1px solid;
+    width: 300px;
+    padding: 21px 17px;
+    margin: 0 20px;
+    line-height: 30px;
+}
+
+/* Hover de las 4 cajas */
+.four-box:hover {
+    background-color: rgb(240, 240, 240);
+    transition: 0.4s ease;
+}
+
+.four-box:hover .first-icon {
+    opacity: 0;
+    transform: translateX(-40%);
+}
+
+.four-box:hover div {
+    transform: translateX(-12%);
+}
+
+.four-box:hover .fa-arrow-right {
+    opacity: 1;
+    transform: translateX(50%);
+    
+}
+/* fin hover */
+
+.first-icon {
+    margin: 12px 17px 0 0;    
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transition-delay: 0.1s;
+}
+
+.four-box div {
+    transition: transform 0.35s ease;
+    transition-delay: 0.1s;
+    width: 100%;
+}
+
+.fa-arrow-right {
+    position: absolute;
+    top: 50%; 
+    left: 87%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.35s ease;
+}
+
+
+
+/*::: SECCION NEGRA  ------------------------------------------------------- :::*/
+/*:: --> TODOS LOS VEHÍCULOS ::*/
+#seccion-negra {
+    background: black;
+}
+
+.header-vehiculos {
+    color: white;
+}
+
+.carrusel-vehiculos {
+    margin: 50px 0;
+}
+
+.carrusel-vehiculos ul {
+    display: flex;
+    padding: 0;
+}
+
+.caja-vehiculo {
+    background-color: rgb(36, 36, 36);
+    border: solid 0.1px rgb(50, 50, 50);
+    color: var(--cont-caja-vehiculos);
+    height: 180px;
+    width: 180px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-vehiculo:hover {
+    background-color: rgb(45, 45, 45);
+    color: rgb(222, 222, 222);
+    cursor: pointer;
+}
+
+.caja-vehiculo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.caja-vehiculo i {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.caja-vehiculo div p{
+    font-size: 0.9rem;
+}
+
+
+/*:: Boton: VOLVER ARRIBA ::*/
+.up-button {
+    display: flex;
+    justify-content: center;
+    margin: 110px 0 80px;
+}
+
+.up-button a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    height: 120px;
+    padding-top: 40px;
+}
+
+/*:: COLUMNAS FINALES ::*/
+
+.columnas-finales {
+    border-bottom: var(--gris-fuente-bordes) 0.1px solid;
+    padding-bottom: 50px;
+}
+
+.lista-columnas {
+    display: flex;
+    line-height: 25px;
+}
+
+.lista-columnas-li {
+    width: 190px;
+    margin: 0 16px;
+}
+
+.lista-columnas h5 {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* ANIMACIÓN UNDERLINE */
+.animacion-underline {
+    cursor: pointer;
+    background: 
+    linear-gradient(to right, black, black),
+    linear-gradient(to right, white, white);
+    background-size: 100% 0.1em;
+    background-position: 100% 105%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+}
+
+.animacion-underline:hover{
+    background-size: 0 0.1em, 100% 0.1em;
+    color:white;
+}
+/* Fin animación */
+
+.lista-columnas-interior li {
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+/*:: FOOTER ::*/
+.footer-f1 {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.footer-f1 i {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.footer-f1-texto a{
+    margin-right: 25px;
+}
+
+.footer-f1-media {
+    color:white;
+}
+
+.footer-f2 {
+    margin-top: 25px;
+}
+
+
+
+
+/* TABLETS 768p x 652 -------------------------------------------------
+----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------*/
+
+@media /*(min-width: 760px) and*/ (max-width: 820px){
+    
+    section:not(#inicio) {
+        padding: 65px 50px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+    
+    h3{
+        font-size: 1.8rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+
+/*::: NAVEGADOR :::*/
+    /* Nav superior */
+    
+    .nav-logo p {
+        display: none;
+    }
+
+    .nav-search p {
+        display: none;
+    }
+
+    .img-logo {
+        position: absolute;
+        left: 45%;
+        top: 13px;
+    }
+
+    .search {
+        opacity: 0;
+    }
+
+    .right-icons .fa-magnifying-glass {
+        display: block;
+    }
+
+    .right-icons {
+        display: flex;
+        position: relative;
+        left: 45px;
+    }
+
+    .right-icons i {
+        padding: 20px;
+    }
+
+    /*iconos burger y coche*/
+    .icons-small-screen {
+        display: flex;
+        color: var(--cont-caja-vehiculos);
+        position: relative;
+        left: 50px;
+        top: 20px;
+    }
+
+    .icons-small-screen label {
+        padding: 18px;
+        height: 55px;
+        margin-left: 5px;
+    }
+
+    .icons-small-screen label:hover {
+        background-color: var(--gris-hover);
+    }
+
+    /* Nav. inferior (blanco/hamburguesa) -----------------------------------------------------------------------------------*/
+/* menú burger */
+
+    #nav-down-small-screen:checked ~ .nav-down-box {
+        display: block;
+
+    }
+
+    #nav-down-small-screen:checked ~ .nav-ul .nav-modelos .background-click {
+        visibility: visible;
+    }
+
+/* fin menu burger */
+    
+    .nav-down-box {
+        display: block;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        width: 375px;
+        height: 505px;
+        border-radius: 1%;
+        background-color: white;
+        color: black;
+        z-index: 99;
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .nav-down-box .derechos {
+        display: block;
+        color: grey;
+    }
+
+    .nav-down-box .fa-car-rear {
+        display: none;
+    }
+
+    .nav-down-box label {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .nav-down-box li {
+        padding: 25px 0 15px;
+        margin: 0 30px;
+        border-bottom: var(--gris-fuente-bordes) 1px solid;
+    }
+
+    .nav-down-box li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-down-box .cont-more-than {
+        display: block;
+        position:relative;
+        top: -10px;
+    }
+
+    .nav-down-box .x-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        margin: 15px 10px 0 auto;
+    }
+    
+    .x-box label {
+        padding: 5px 10px;
+    }
+
+    .nav-ul hr {
+        display: none;
+    }
+
+    .background-click {
+        top: 14vh;
+        height: 110vh;
+    } 
+
+    /* Ventana modal */
+
+    .content-modal {
+        top: 120px;
+        left: 50px;
+        width: 375px;
+        height: 505px;
+        border-radius: 1%;
+        padding-top: 5px;
+        z-index: 100;
+        opacity: 0;
+        transform: translateX(-120%);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+    .content-list {
+        padding: 25px 30px 50px;
+
+    }
+
+    .content-list li:first-of-type {
+        margin-top: 30px;
+    }
+
+    .list1-bottom {
+        margin-bottom: 40px;
+    }
+
+    .list1-content-bottom {
+        padding: 25px 0;
+    }
+    
+    .content-list h3 {
+        display: none;
+    }
+
+    .content-list li {
+        padding: 20px 0;
+    }
+    
+    .list-modelos, .list-modelos a, .list-comprar, .list1-bottom a, .label-return p {
+        font-size: 0.9rem;
+    }
+
+    .x-box {
+        top: -2px;
+    }
+    
+    .x-box label {
+        padding-right: 20px;
+    }
+
+    /* Etiqueta volver a ventana principal */
+    .label-return {
+        display: flex;
+        width: 100%;
+    }
+
+    .label-return p {
+        font-weight: bold;
+        z-index: 0;
+    }
+
+    .cont-less-than {
+        padding-left: 15px;
+        margin-right: 20px;
+        padding-left: 0;
+    }
+    
+    .less-than{
+        width: 9px;
+        height: 9px;
+        margin-top: 5px;
+        border-bottom: 2.2px solid black;
+        border-left: 2.2px solid black;
+        rotate: 45deg;
+    }
+
+    /* Transición translateX contenido ventanas */
+    #show-modelos:checked ~ .content-modal, 
+    #show-comprar:checked ~ .content-modal, 
+    #show-asesoramiento:checked ~ .content-modal,
+    #show-servicios:checked ~ .content-modal, 
+    #show-tecnologia:checked ~ .content-modal{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Transición ventanas modales */
+
+
+    /* Transición ventana modal principal */
+     #nav-down-small-screen:checked ~ .nav-down-box, 
+     #nav-down-small-screen:checked ~ .nav-down-box li,
+     #nav-down-small-screen:checked ~ .nav-down-box .x-box{
+        opacity: 1;
+        transform: translateX(0);
+        display: block;
+    }
+    .nav-down-box {
+        
+    } 
+    .nav-down-box li, .nav-down-box .x-box {
+        display: none;
+    }
+
+/*::: SECCIÓN INICIO :::----------------------------------------------------------------------------------------------------------------------*/
+
+    #inicio {
+        background: linear-gradient(0deg, black 30%, transparent 50%, transparent);
+        height: 730px;
+    }
+
+    #inicio img{
+        width: 153vw;
+        position: absolute;
+        left: -53vw;
+        z-index: -1;
+    }
+
+    .inicio-box{
+        margin: auto 0px 25px 50px;
+    }
+
+    .inicio-titulo {
+        font-size: 1.9rem;
+    }
+    
+    .inicio-box p {
+        padding: 20px 0 10px;
+    }
+    
+    /*Botones/enlaces*/
+    .inicio-enlaces {
+        margin-top: 60px;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    .inicio-enlaces div {
+        border-radius: 2%;
+        margin: 0 5px;
+        width: 315px;
+        text-align: center;
+    }
+
+/*::: SECCION RECOMENDACIONES ------------------------------------------:::*/
+
+    .carrusel {
+        margin-top: 30px;
+    }
+
+    .carrusel-li img {
+        width: 290px;
+    }
+
+    .carrusel-li-text p {
+        font-size: 0.9rem;
+    }
+
+    .carrusel-li-text h4 {
+        font-size: 1rem;
+        padding-bottom: 8px;
+    }
+
+    /* Botones carrusel mayor y menor que '>' '<' */
+    .next-one, .prev-one {
+        position: absolute;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .next-one {
+        left: 80.5vw;
+        top: 210px;
+    }
+
+    .prev-one{
+        top: 210px;
+        left: 2px;
+    }
+
+    .prev-pair, .next-pair {
+        display: none;
+    }
+
+
+    /* TRANSICIÓN DEL CARRUSEL (MOVIMIENTO) */
+    /* FLECHAS */
+    #button1:checked ~ ul {
+        transform: translateX(0%);
+    }
+    #button1:checked ~ .next-pair {
+       display: block;
+    }    
+
+    #button1-1:checked ~ ul {
+        transform: translateX(-100%);
+    }
+
+    #button2-1:checked ~ ul {
+        transform: translateX(-100%);
+    }
+
+    #button2:checked ~ ul {
+        transform: translateX(-200%);
+    }
+    #button2:checked ~ .prev-pair {
+        display: block;
+    }
+
+    
+    /* Posición de las bolas 25px*/
+    .default-bottom {
+        left: 265px;
+        top: 520px;
+    }
+    .one-bottom {
+        left: 290px;
+        top: 520px;
+
+    }
+    .two-bottom {
+        left: 315px;
+        top: 520px;
+    }
+
+    .three-bottom {
+        left: 340px;
+        top: 520px;
+    }
+
+    .four-bottom {
+        left: 365px;
+        top: 520px;
+    }
+
+    .label-button-3, .label-button-4 {
+        display: block;
+    }
+
+    /* TRANSICIÓN BOLITAS */
+    #button-default:checked ~ ul {
+        transform: translateX(0%);
+    }
+    #button-one:checked ~ ul {
+        transform: translateX(-50%);
+    }
+    #button-two:checked ~ ul {
+        transform: translateX(-100%);
+    }
+    #button-three:checked ~ ul {
+        transform: translateX(-150%);
+    }
+    #button-four:checked ~ ul {
+        transform: translateX(-200%);
+    }
+
+    /* COLOR BOLITAS */
+    /* Posición 0% */
+    #button1:checked ~ label .default-bottom div {
+        background-color: black;
+    }
+    #button-default:checked ~ label .default-bottom div {
+        background-color: black;
+    }
+    /* Posición a 50% */
+    #button-one:checked ~ label .one-bottom div {
+        background-color: black;
+    }
+    /* Posición a 100% */
+    #button2-1:checked ~ label .two-bottom div {
+        background-color: black;
+    }
+    #button-two:checked ~ label .two-bottom div {
+        background-color: black;
+    }
+    #button2:checked ~ label .two-bottom div {  
+        /* Para neutralizar el efecto con pantalla grande */
+        background-color: grey;
+    }
+    /* Posición a 150% */
+    #button-three:checked ~ label .three-bottom div {
+        background-color: black;
+    }
+    /* Posición a 200% */
+    #button2:checked ~ label .four-bottom div {
+        background-color: black;
+    }
+    #button-four:checked ~ label .four-bottom div {
+        background-color: black;
+    }
+
+
+/*::: SECCION MODELOS :::*/
+    .modelos-nav-top, .modelos-nav-left {
+        display: none;
+    }
+
+    .modelos-nav-tiny {
+        display: block;
+    }
+
+    .modelos-grid {
+        top: 100px;
+        left: 0px;
+    }
+
+
+/*::: SECCIÓN NEGRA :::*/
+
+    .lista-columnas {
+        display: block;
+    }
+
+}
